@@ -1,0 +1,44 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /customer-order/order-service
+
+spring:
+  application:
+    name : order-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://order-db-instance-1.ctq3aozzftwt.ap-northeast-2.rds.amazonaws.com:3306/orderdb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: admin
+    password: admin123
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    generate-ddl: true
+    show-sql: true
+  # datasource:
+  #   driver-class-name: org.h2.Driver
+  #   url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+  #   username: sa
+  #   password:
+  # h2:
+  #   console:
+  #     enabled: true
+  #     path: /console
+  # jpa:
+  #   database-platform: org.hibernate.dialect.H2Dialect
+  #   database: H2
+  #   show-sql: true
+
+customer:
+  topic:
+    name: customerTopic
+
+order:
+  topic:
+    name: orderTopic
+
+#kafka:
+#  bootstrapAddress: b-1.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092,b-2.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092,b-3.edamsk.8orhx7.c17.kafka.us-east-1.amazonaws.com:9092
+kafka:
+  bootstrapAddress: b-2.edamsk.s3op4t.c3.kafka.ap-northeast-2.amazonaws.com:9092,b-1.edamsk.s3op4t.c3.kafka.ap-northeast-2.amazonaws.com:9092,b-3.edamsk.s3op4t.c3.kafka.ap-northeast-2.amazonaws.com:9092

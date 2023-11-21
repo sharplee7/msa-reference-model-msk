@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.order.domain.CustomerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-14T13:43:23" hostname="ip-10-0-0-89.ap-northeast-2.compute.internal" time="0.055">
+  <properties/>
+  <testcase name="reserveCredit()" classname="com.example.order.domain.CustomerTest" time="0.031"/>
+  <testcase name="getCreditLimit()" classname="com.example.order.domain.CustomerTest" time="0.004"/>
+  <testcase name="getName()" classname="com.example.order.domain.CustomerTest" time="0.007"/>
+  <testcase name="availableCredit()" classname="com.example.order.domain.CustomerTest" time="0.002"/>
+  <testcase name="getId()" classname="com.example.order.domain.CustomerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

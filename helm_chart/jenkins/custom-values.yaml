@@ -1,0 +1,19 @@
+controller:
+  JCasC:
+    securityRealm: |-
+      local:
+        allowsSignup: false
+        enableCaptcha: false
+        users:
+        - id: "admin"
+          name: "Jenkins Admin"
+          password: "<password>"
+    authorizationStrategy: |-
+      loggedInUsersCanDoAnything:
+        allowAnonymousRead: false
+  servicePort: 80
+  serviceType: LoadBalancer
+  serviceAnnotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-095f75c4747bfa958,subnet-0b7f55d5d2d469ba3,subnet-0ad4984e4ff928bf1
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"

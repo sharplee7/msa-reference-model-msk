@@ -1,0 +1,18 @@
+grafana:
+  ingress:
+    enabled: true
+    ingressClassName: alb
+    annotations: {
+      alb.ingress.kubernetes.io/scheme: "internet-facing",
+      alb.ingress.kubernetes.io/target-type: "ip",
+      alb.ingress.kubernetes.io/group.name: "prometheus-app",
+      alb.ingress.kubernetes.io/load-balancer-name: "alb-prometheus-app",
+      alb.ingress.kubernetes.io/backend-protocol: "HTTP",
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]',
+      alb.ingress.kubernetes.io/healthcheck-path: "/login"
+    }
+kubeProxy:
+  enabled: false
+
+
+

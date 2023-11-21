@@ -1,0 +1,7 @@
+**/.terraform
+**/terraform.tfstate
+script/kubectl
+script/*.tar.gz
+script/*.html
+**/.terraform.lock.hcl
+**/terraform.tfstate.backup
